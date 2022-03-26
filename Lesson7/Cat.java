@@ -17,10 +17,10 @@ public class Cat {
     }
 
     public void eat(Plate p) {
-        if (p.getFood() > appetite) {
+        if (p.getFood() >= appetite) {
             p.decreaseFood(appetite);
             fullness = true;
-            System.out.println("Кот ест " + appetite);
+            System.out.println("Кот " + name + " ест " + appetite);
         }
         else {
             System.out.println("Не достаточно еды");
@@ -29,10 +29,10 @@ public class Cat {
 
     public void info() {
         if (fullness) {
-            System.out.println("Кот сыт");
+            System.out.println("Кот " + name + " сыт");
         }
         else {
-            System.out.println("Кот голодный");
+            System.out.println("Кот " + name + " голодный");
         }
     }
 }
